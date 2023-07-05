@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+/* reset CSS "start" */
+
+* {
+    margin: 0;
+    padding: 0;
+ }
+ 
+ :root {
+    box-sizing: border-box;
+    --ubuntu-font: 'Ubuntu', sans-serif;
+ }
+
+*,
+::before,
+::after {
+   box-sizing: inherit;
+}
+
+/* Reset CSS "end" */
