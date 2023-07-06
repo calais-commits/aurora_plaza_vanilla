@@ -16,7 +16,18 @@
   </header>
 
   <main>
-
+    <section class="carousel-section">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="assets/mall-2.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="text-primary-emphasis">Aurora Plaza</h1>
+              <h2 class="text-secondary-emphasis">¡Únete a nosotros!</h2>
+            </div>
+          </div>
+        </div>
+    </section>
   </main>
 
   <footer class="footer-section d-flex flex-column align-items-center bg-primary row">
