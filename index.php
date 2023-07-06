@@ -16,9 +16,10 @@
   </header>
 
   <main>
+
   </main>
-  
-  <footer class="footer-section d-flex flex-column align-items-center bg-primary mt-4 row">
+
+  <footer class="footer-section d-flex flex-column align-items-center bg-primary row">
     <?php include("includes/footer.html") ?>
   </footer>
   <script src="js/bootstrap.min.js"></script>
