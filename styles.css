@@ -18,4 +18,12 @@
    box-sizing: inherit;
 }
 
+html{
+   scroll-behavior: smooth;
+}
+
 /* Reset CSS "end" */
+
+.navbar{
+   height: 4rem;
+}
