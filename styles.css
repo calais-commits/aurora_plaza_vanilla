@@ -3,14 +3,14 @@
 /* reset CSS "start" */
 
 * {
-    margin: 0;
-    padding: 0;
- }
- 
- :root {
-    box-sizing: border-box;
-    --ubuntu-font: 'Ubuntu', sans-serif;
- }
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   box-sizing: border-box;
+   --ubuntu-font: 'Ubuntu', sans-serif;
+}
 
 *,
 ::before,
@@ -18,12 +18,61 @@
    box-sizing: inherit;
 }
 
-html{
+html {
    scroll-behavior: smooth;
 }
 
 /* Reset CSS "end" */
 
-.navbar{
+/* Header "start" */
+
+.navbar {
    height: 4rem;
 }
+
+/* Header "end" */
+
+/* Footer "start" */
+
+/* First section */
+
+.icon-first-part-footer-page {
+   background-color: #333;
+   border-radius: 50%;
+   border: 1px solid #444;
+   height: 40px;
+   width: 40px;
+   margin: 0 0.25rem;
+   color: #ddd;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.icon-first-part-footer-page:hover {
+   cursor: pointer;
+}
+
+/* Second section */
+
+.second-part-footer {
+   margin: 0 0 0.5rem 0.5rem;
+}
+
+.second-part-footer-container h5 {
+   color: rgba(255, 255, 255, 0.55);
+}
+
+.second-part-footer-p-container p {
+   color: rgba(255, 255, 255, 0.70);
+   font-size: 0.82rem;
+   margin-bottom: 0.25rem;
+}
+
+/* Third section */
+
+.third-section p {
+   color: rgba(255, 255, 255, 0.55);
+}
+
+/* Footer "end" */
