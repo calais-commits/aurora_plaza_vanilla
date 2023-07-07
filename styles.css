@@ -39,10 +39,11 @@ html {
 /* Second section */
 
 .img-custom {
-   width: 10%; /* Ancho completo de la columna */
-   height: auto; /* Altura automática para mantener la proporción */
-   /* Otros estilos personalizados si es necesario */
- }
+   width: 10%;
+   height: auto;
+}
+
+
 
 /* Main "end */
 

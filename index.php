@@ -28,12 +28,12 @@
           </div>
         </div>
     </section>
-    <section class="second-section" id="aboutus">
-      <div class="container my-3">
+    <section class="second-section mb-5" id="aboutus">
+      <div class="container my-4">
         <div class="row ">
           <div class="col-6 align-self-center">
             <h2 class="text-primary">Sobre nosotros</h2>
-            <p class="text-secondary">¡Construimos centros comerciales desde el año 1401 y seguimos aquí! Contamos con muchas sucursales a lo largo de América y Europa. Abre tu local con nosotros y sé parte de nuestro inmenso de equipo y emprendedores que han dado vida a sus negocios con nosotros.</p> 
+            <p class="text-secondary">¡Construimos centros comerciales desde el año 1401 y seguimos aquí! Contamos con muchas sucursales a lo largo de América y Europa. Abre tu local con nosotros y sé parte de nuestro inmenso de equipo y emprendedores que han dado vida a sus negocios con nosotros.</p>
             <p>¿Qué esperas? ¡Abre tu tienda con nosotros!</p>
           </div>
           <div class="col-6">
@@ -53,6 +53,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
