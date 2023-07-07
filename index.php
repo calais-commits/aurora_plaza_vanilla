@@ -17,6 +17,7 @@
 
   <main>
     <section class="carousel-section">
+      <!-- Carousel -->
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -29,13 +30,16 @@
         </div>
     </section>
     <section class="second-section mb-5" id="aboutus">
+      <!-- Contenedor -->
       <div class="container my-4">
-        <div class="row ">
+        <div class="row">
+          <!-- Texto -->
           <div class="col-6 align-self-center">
             <h2 class="text-primary">Sobre nosotros</h2>
             <p class="text-secondary">¡Construimos centros comerciales desde el año 1401 y seguimos aquí! Contamos con muchas sucursales a lo largo de América y Europa. Abre tu local con nosotros y sé parte de nuestro inmenso de equipo y emprendedores que han dado vida a sus negocios con nosotros.</p>
             <p>¿Qué esperas? ¡Abre tu tienda con nosotros!</p>
           </div>
+          <!-- Imagen -->
           <div class="col-6">
             <div class="img-container ">
               <img class="img-fluid w-75" src="assets/aboutus2.jpg" alt="aboutus-img">
