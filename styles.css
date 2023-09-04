@@ -45,21 +45,43 @@ html {
 
 /* Third section */
 
+@media only screen and (max-width: 767px){
+   .carousel-inner{
+      width: 80%;
+   }
+}
 
 
 @media only screen and (min-width: 768px) {
 
+   /* Header */
+
+
+
+
+   /* Second section */
+
+
+
+   /* Third section */
+
+   
+   .img-container, .img-container img{
+      display: block;
+      margin: 0 auto;
+   }
+
    .cards-inner {
       display: flex;
       height: 30rem;
-      width: 70%;
+      width: 85%;
       margin: 0 auto;
    }
 
    .cards-item {
       margin-right: 0;
       margin-left: 0;
-      flex: 0 0 10, 33333333333333%;
+      flex: 0 0 calc(100%/3);
       display: block;
    }
 
@@ -75,16 +97,19 @@ html {
 
    .card img {
       width: 320px;
-      height: 213.33px;
-      background-position: cover;
+      height: 192px;
+   }
+
+   .c-img{
+      height: 192px;
    }
 
    .card-title {
-      font-size: 17px;
+      font-size: 18px;
    }
 
    .card-text {
-      font-size: 14px;
+      font-size: 15px;
    }
 
    .button-container {
@@ -109,17 +134,24 @@ html {
 
 @media only screen and (min-width: 992px) {
 
+
    .cards-inner {
       height: 30rem;
       width: 100%;
    }
 
-   .card-title {
-      font-size: 17px;
+   .card-img{
+      width: 320px;
+      height: 224px;
    }
 
+   .card-title {
+      font-size: 19px;
+   }
+
+
    .card-text {
-      font-size: 12.5px;
+      font-size: 16px;
    }
 
    .cards-item {
@@ -131,6 +163,17 @@ html {
 }
 
 @media only screen and (min-width: 1419px) {
+
+   /* Second section */
+   .second-section{
+      height: 300px;
+   }
+
+   .img-container img{
+      height: 250px;
+   }
+
+   /* Third section */
    .card-title {
       font-size: 20px;
    }
