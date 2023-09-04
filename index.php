@@ -20,7 +20,7 @@
     <?php include("includes/main.html"); ?>
   </main>
   
-  <footer class="footer-section d-flex flex-column align-items-center bg-primary row">
+  <footer class="footer-section d-flex flex-column align-items-center bg-primary row mt-3">
     <?php include("includes/footer.html") ?>
   </footer>
   <script src="js/bootstrap.min.js"></script>
