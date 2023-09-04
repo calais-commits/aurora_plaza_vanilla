@@ -43,9 +43,16 @@ html {
    height: auto;
 }
 
+
+
 /* Third section */
 
 @media only screen and (max-width: 767px){
+
+   .navbar{
+      height: 80px;
+   }
+
    .carousel-inner{
       width: 80%;
    }
@@ -192,6 +199,10 @@ html {
 /* Footer "start" */
 
 /* First section */
+
+.footer-container{
+   margin-top: 3rem;
+}
 
 .icon-first-part-footer-page {
    background-color: #333;
