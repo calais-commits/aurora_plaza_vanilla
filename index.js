@@ -1,23 +1,53 @@
-
 $(document).ready(function () {
 
   var screenWidth = $(window).width();
 
-  if (screenWidth <= 767) {
+  function addStyles() {
+    /* Second section styles */
+    $("#second-section-text-container").removeClass("col-6");
+    $("#second-section-text-container").addClass("row-6");
+    $("#second-section-img-container").removeClass("col-6");
+    $("#second-section-img-container").addClass("row-6");
+    $("#second-section-title").addClass("text-center");
+    $(".img-container").addClass("w-100");
+    
+    /* Carousel styles */
+    $(".btn-info").addClass("w-100");
+    $(".carousel-item").css("width", "100%");
     $(".btn-info").addClass("w-100");
     $(".carousel-item").css("width", "100%");
   }
 
+  function removeStyles (){
+    /* Second section styles */
+    $("#second-section-text-container").addClass("col-6");
+    $("#second-section-text-container").removeClass("row-6");
+    $("#second-section-img-container").addClass("col-6");
+    $("#second-section-img-container").removeClass("row-6");
+    $("#second-section-title").removeClass("text-center");
+    $(".img-container").removeClass("w-100");
+    /* Carousel styles */
+    $(".btn-info").removeClass("w-100");
+    $(".carousel-item").css("width", "100%");
+    $(".btn-info").removeClass("w-100");
+    $(".carousel-item").css("width", "100%");
+  }
+
+  if (screenWidth <= 767) {
+    addStyles();
+  }
+
   $(window).resize(function () {
+
     var screenWidth = $(window).width();
 
-    if (screenWidth <= 767) {
-      $(".btn-info").addClass("w-100");
-      $(".carousel-item").css("width", "100%");
+    if (screenWidth > 767) {
+      removeStyles();
+    } else if(screenWidth <=767){
+      addStyles();
     }
-    else{
-      $(".btn-info").removeClass("w-100");
-    }
+
+
   });
 
 
