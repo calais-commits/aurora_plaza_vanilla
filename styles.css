@@ -43,19 +43,23 @@ html {
    height: auto;
 }
 
-
+.banner div img{
+   min-height: 40vh;
+}
 
 /* Third section */
 
 @media only screen and (max-width: 767px){
 
+
    .navbar{
       height: 80px;
    }
 
-   .carousel-inner{
+   .cards-inner{
       width: 80%;
    }
+
 }
 
 
@@ -153,12 +157,12 @@ html {
    }
 
    .card-title {
-      font-size: 19px;
+      font-size: 18px;
    }
 
 
    .card-text {
-      font-size: 16px;
+      font-size: 15px;
    }
 
    .cards-item {
