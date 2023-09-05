@@ -35,18 +35,25 @@ $(document).ready(function () {
 
   if (screenWidth <= 767) {
     addStyles();
+    
+  }else if (screenWidth > 1050){
+    $(".second-part-footer-container").css("margin-left", "1rem");
   }
 
   $(window).resize(function () {
 
     var screenWidth = $(window).width();
 
+    
     if (screenWidth > 767) {
       removeStyles();
     } else if(screenWidth <=767){
       addStyles();
     }
-
+    
+    if (screenWidth > 1050){
+      $(".second-part-footer-container").css("margin-left", "1rem");
+    }
 
   });
 

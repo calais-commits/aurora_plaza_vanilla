@@ -163,7 +163,7 @@ html {
 
    
 }
-@media only screen and (max-width: 488px){
+@media only screen and (max-width: 1050px){
 
    /* Footer */
 
@@ -261,10 +261,6 @@ html {
 }
 
 /* Second section */
-
-.second-part-footer {
-   margin: 0 0 0.5rem 1.3rem;
-}
 
 .second-part-footer-container h5 {
    color: rgba(255, 255, 255, 0.55);
