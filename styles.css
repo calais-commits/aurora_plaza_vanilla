@@ -49,8 +49,16 @@ html {
 
 /* Third section */
 
-@media only screen and (max-width: 767px){
+@media only screen and (min-width: 576px){
+   
+   .second-part-footer-container, .second-part-footer-p-container {
+      flex-wrap: wrap;
+   }
 
+}
+
+
+@media only screen and (max-width: 767px){
 
    .navbar{
       height: 80px;
@@ -63,7 +71,13 @@ html {
       width: 80%;
    }
 
+   /* Footer */
 
+   /* Second section */
+
+   .second-part-footer-p-container p{
+      font-size: 13px;
+   }
 }
 
 
@@ -147,6 +161,20 @@ html {
       top: 389.328px;
    }
 
+   
+}
+@media only screen and (max-width: 488px){
+
+   /* Footer */
+
+   /* Second section */
+   .second-part-footer-container, .second-part-footer-p-container{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+      flex-direction: block;
+   }
 }
 
 @media only screen and (min-width: 992px) {
@@ -177,6 +205,10 @@ html {
       flex: 0 0 20%;
       display: block;
    }
+
+   /* Footer */
+
+   /* Second section */
 
 }
 
