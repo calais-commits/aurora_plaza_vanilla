@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-  <script src="carousel.js"></script>
   <title>Aurora Plaza</title>
 </head>
 
@@ -23,6 +22,7 @@
   <footer class="footer-section d-flex flex-column align-items-center bg-primary row mt-3">
     <?php include("includes/footer.html") ?>
   </footer>
+  <script src="carousel.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script src="index.js"></script>
