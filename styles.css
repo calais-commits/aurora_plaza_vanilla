@@ -56,9 +56,13 @@ html {
       height: 80px;
    }
 
+   .img-container img{
+      min-height: 30vh;
+   }
    .cards-inner{
       width: 80%;
    }
+
 
 }
 
@@ -81,6 +85,8 @@ html {
       display: block;
       margin: 0 auto;
    }
+
+   /* Third section */
 
    .cards-inner {
       display: flex;
@@ -145,6 +151,7 @@ html {
 
 @media only screen and (min-width: 992px) {
 
+   /* Third section */
 
    .cards-inner {
       height: 30rem;
@@ -178,10 +185,6 @@ html {
    /* Second section */
    .second-section{
       height: 300px;
-   }
-
-   .img-container img{
-      height: 250px;
    }
 
    /* Third section */
