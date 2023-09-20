@@ -1,6 +1,7 @@
+<?php
 
+include("includes/header.html");
+include("includes/main.html");
+include("includes/footer.html");
 
-<?php include("includes/header.html"); ?>
-<?php include("includes/main.html"); ?>
-<?php include("includes/footer.html"); ?>
-
+?>
