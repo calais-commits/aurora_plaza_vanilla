@@ -18,7 +18,6 @@ if (isset($_SESSION['user_session'])){
     //Validate if email have value 1 in admin field
     if($user){
       if($user['admin'] == 1){
-        echo $user['email'] . $user['admin'];
         include("includes/header.html");
         include("includes/main.html");
         include("includes/footer.html");
@@ -27,17 +26,16 @@ if (isset($_SESSION['user_session'])){
         exit();
       }
     } else {
-      echo $user['email'] . $user['admin'];
       header('Location: ../login/login.php');
       exit();
     }
 
   } catch(PDOException $e){
-    echo $user['email'] . $user['admin'];
+    header('Location: ../login/login.php');
     echo "Error en la base de datos: " . $e->getMessage();
   }
 
 } else {
-  echo $user['email'] . $user['admin'];
+  header('Location: ../login/login.php');
   exit();
 }

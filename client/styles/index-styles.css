@@ -47,6 +47,8 @@ html {
    min-height: 40vh;
 }
 
+
+
 /* Third section */
 
 @media only screen and (min-width: 576px){
@@ -61,7 +63,7 @@ html {
 @media only screen and (max-width: 767px){
 
    .navbar{
-      height: 80px;
+      height: 105px;
    }
 
    .img-container img{
@@ -85,7 +87,10 @@ html {
 
    /* Header */
 
-
+   
+   .logout{
+      padding-right: 3rem;
+   }
 
 
    /* Second section */
