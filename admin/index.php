@@ -18,9 +18,9 @@ if (isset($_SESSION['user_session'])){
     //Validate if email have value 1 in admin field
     if($user){
       if($user['admin'] == 1){
-        include("includes/header.html");
-        include("includes/main.html");
-        include("includes/footer.html");
+        include("includes/header.php");
+        include("includes/main.php");
+        include("includes/footer.php");
       } else {
         header('Location: ../login/login.php');
         exit();
