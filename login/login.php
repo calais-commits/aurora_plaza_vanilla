@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
 	$message = "";
 	//Prepare SQL query for submit user data to DB.
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql = $pdo->prepare("SELECT *, admin FROM user WHERE email=:email AND password=:password");
+	$sql = $pdo->prepare("SELECT *, admin, name FROM user WHERE email=:email AND password=:password");
 	$sql->bindParam(':email', $email);
 	$sql->bindParam(':password', $password);
 	//Try to xecute query and capture result from query.
@@ -35,6 +35,7 @@ if (isset($_POST['submit'])) {
 	//Log as admin.
 	if ($user['email'] === $email && $user['password'] === $password && $user['admin'] == 1) {
 		$_SESSION['user_session'] = $user['email'];
+		$_SESSION['user_name'] = $user['name'];
 		$_SESSION['admin'] = TRUE;
 		header('Location: ../admin/index.php');
 		$message = "<div class='alert alert-success text-center' role='alert'>Has ingresado satisfactoriamente como administrador.</div>";
@@ -42,6 +43,7 @@ if (isset($_POST['submit'])) {
 	//Log as client .
 	elseif ($user['email'] === $email && $user['password'] === $password && $user['admin'] != 1) {
 		$_SESSION['user_session'] = $user['email'];
+		$_SESSION['user_name'] = $user['name'];
 		$_SESSION['admin'] = FALSE;
 		header('Location: ../client/index.php');
 		$message = "<div class='alert alert-success text-center' role='alert'>Has ingresado satisfactoriamente como cliente.</div>";
@@ -49,6 +51,10 @@ if (isset($_POST['submit'])) {
 	//Validate if fields are empty.
 	elseif ($email === "" || $name === "" || $password === "") {
 		$message = "<div class='alert alert-warning text-center' role='alert'>Por favor, ingrese sus datos.</div>";
+	}
+	//If introduced data are incorrect
+	elseif($email!=$user['email'] || $password!=$user['password']){
+		$message = "<div class='alert alert-danger text-center' role='alert'>Datos incorrectos.</div>";
 	}
 	//If a session already exist.
 	elseif (isset($_SESSION['user_session'])){
@@ -60,7 +66,6 @@ if (isset($_POST['submit'])) {
 		elseif($admin == FALSE){
 			header('Location: ../client/index.php');
 		}
-		$message = "<div class='alert alert-danger text-center' role='alert'>Datos incorrectos.</div>";
 	}
 }
 
@@ -106,7 +111,7 @@ if (isset($_POST['submit'])) {
 					<form class="login100-form validate-form">
 						<!-- Message -->
 						<?php if ($message) : ?>
-							<?= $message.$_SESSION['user_session']."xd"; ?>
+							<?= $message; ?>
 						<?php endif; ?>
 						<!-- Logo -->
 						<span class="login100-form-logo">

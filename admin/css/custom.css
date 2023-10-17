@@ -1,0 +1,4 @@
+.bg-gradient-custom{
+  background: #1a1a1a;
+  background-image:linear-gradient(180deg,#1a1a1a 10%,#224abe 500%);background-size:cover
+}
