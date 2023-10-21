@@ -1,6 +1,6 @@
 <?php
 include('../database/dbconn.php');
-session_start();
+
 // Submit data to DB 
 if (isset($_REQUEST['submit'])) {
 	// Capture user data 
