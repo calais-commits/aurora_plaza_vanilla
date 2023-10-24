@@ -1,4 +1,5 @@
 <div class="container">
+  <button class="mb-4 btn btn-info"><a href="create.php" class="text-decoration-none text-white"><strong>Añadir</strong></a></button>
   <table class="table">
     <thead>
       <tr>
