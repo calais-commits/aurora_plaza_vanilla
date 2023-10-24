@@ -1,5 +1,3 @@
-<?php 
-?>
 <div class="container">
   <table class="table">
     <thead>
@@ -31,11 +29,9 @@
           <td class="text-center"><?= $r['product_name'] ?></td>
           <td class="text-center"><?= $r['product_size'] ?></td>
           <td class="text-center"><?= $r['floor'] ?></td>
-          <?php echo $r['id'] ?>
-          <td class="text-center"><img src="includes/image.php?id=<?php echo $r['id'] ?>" alt="image" class="w-50"></td>
-          <?php echo $r['id'] ?>
+          <td class="text-center"><img src="image.php?id=<?php echo $r['id'] ?>" alt="image" class="w-50"></td>
           <td class="text-center"><?= $r['description'] ?></td>
-          <td class="text-center"><a href="#">Actualizar</a></td>
+          <td class="text-center"><a href="update.php?upd=<?php echo $r['id'] ?>">Actualizar</a></td>
           <td class="text-center"><a href="#">Eliminar</a></td>
         </tr>
       <?php endforeach; ?>

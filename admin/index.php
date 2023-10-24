@@ -1,7 +1,6 @@
 <?php
 //Connection to DB
 include('../database/dbconn.php');
-session_start();
 
 //Verify if user is logged
 if (isset($_SESSION['user_session'])){

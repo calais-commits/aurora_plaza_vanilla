@@ -1,9 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-include('../../database/dbconn.php');
-
-
+include('../database/dbconn.php');
 
 // Verifica si se proporciona un ID en la URL
 if (isset($_GET['id'])) {
@@ -27,7 +25,4 @@ if (isset($_GET['id'])) {
     header("Content-type: image/jpeg");
     echo $img_data['image'];
   }
-} else {
-  // Si no se proporciona un ID en la URL, puedes manejarlo según tus necesidades.
-  echo "ID no proporcionado";
 }
