@@ -26,3 +26,4 @@ if (isset($_GET['id'])) {
     echo $img_data['image'];
   }
 }
+?>
