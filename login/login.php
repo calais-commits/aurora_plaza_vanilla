@@ -1,7 +1,6 @@
 <?php
 //DB connection
 include('../database/dbconn.php');
-session_start();
 
 // Verify is session variable already exist
 if (isset($_SESSION['user_session'])) {

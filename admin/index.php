@@ -1,7 +1,6 @@
 <?php
 //Connection to DB
 include('../database/dbconn.php');
-session_start();
 
 //Verify if user is logged
 if (isset($_SESSION['user_session'])){
@@ -22,20 +21,24 @@ if (isset($_SESSION['user_session'])){
         include("includes/main.php");
         include("includes/footer.php");
       } else {
-        header('Location: ../login/login.php');
+        header('Location: ../database/logout.php');
         exit();
       }
     } else {
-      header('Location: ../login/login.php');
+      header('Location: ../database/logout.php');
       exit();
     }
 
   } catch(PDOException $e){
-    header('Location: ../login/login.php');
+    header('Location: ../database/logout.php');
     echo "Error en la base de datos: " . $e->getMessage();
   }
 
 } else {
-  header('Location: ../login/login.php');
+  header('Location: ../database/logout.php');
   exit();
 }
+
+
+?>
+
