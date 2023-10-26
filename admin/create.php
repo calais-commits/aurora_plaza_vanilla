@@ -119,9 +119,6 @@ if (isset($_POST['submit'])) {
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-          <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
-          </div>
           <div class="sidebar-brand-text mx-3">Aurora Plaza Admin</div>
         </a>
 
@@ -192,21 +189,33 @@ if (isset($_POST['submit'])) {
           </nav>
           <!-- End of Topbar -->
           <!-- Create -->
-          <section>
-            <form method="POST" action="create.php" enctype="multipart/form-data"><br>
-              <input type="text" name="name" placeholder="Nombre del local"><br>
-              <input type="number" name="size" placeholder="Tamaño del local"><br>
-              <input type="number" name="floor" placeholder="Piso del local"><br>
-              <input type="text" rows="10" cols="10" name="description" placeholder="Descripción del local"><br>
-              <input type="file" name="img" placeholder="Imagen"><br>
-              <input type="submit" name="submit" value="Aceptar">
+          <section class="container w-25">
+            <div id="my-3 d-flex flex-row"><p><h1 class="text-center">Añadir producto</h1></p></div>
+            <form  method="POST" action="create.php" enctype="multipart/form-data"><br>
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Nombre del local" class="form-control"><br>
+              </div>
+              <div class="form-group">
+                <input type="number" name="size" placeholder="Tamaño del local" class="form-control"><br>
+              </div>
+              <div class="form-group">
+                <input type="number" name="floor" placeholder="Piso del local" class="form-control"><br>
+              </div>
+              <div class="form-group">
+                <input type="text" rows="10" cols="10" name="description" placeholder="Descripción del local" class="form-control"><br>
+              </div>
+              <div class="form-group">
+                <input type="file" name="img" placeholder="Imagen" class="form-control"><br>
+              </div>
+              <input type="submit" name="submit" value="Aceptar" class="btn btn-success" class="form-control">
             </form>
           </section>
+          
         </div>
       </div>
     </div>
 
   </body>
-  <?php include("includes/footer.php"); ?>
+
 
   </html>

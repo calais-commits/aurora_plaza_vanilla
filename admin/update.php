@@ -17,7 +17,7 @@ if(isset($_GET['upd'])){
 
 ?>
 
-<div class="container m-auto w-25">
+<div class="container m-auto w-25 flex-grow-1">
   <div id="my-3 text-center d-flex flex-row justify-content-center"><p><h1>Actualizar producto</h1></p></div>
   <form action="upd.php" method="POST" enctype="multipart/form-data">
     <div class="form-group">
@@ -51,7 +51,5 @@ if(isset($_GET['upd'])){
   <script src="js/demo/chart-pie-demo.js"></script>
   
 </body>
-<?php
-include_once("includes/footer.php");
-?>
+
 </html>
