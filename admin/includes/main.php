@@ -1,15 +1,19 @@
 <div class="container">
-  <button class="mb-4 btn btn-info"><a href="create.php" class="text-decoration-none text-white"><strong>Añadir</strong></a></button>
+  <button class="mb-4 btn btn-info"><a href="create.php" class="text-decoration-none text-white d-flex align-items-center">
+    <strong>Añadir</strong>
+      <ion-icon class="ml-1" name="create"></ion-icon>
+    </a>
+  </button>
   <table class="table">
     <thead>
       <tr>
-        <td class="text-center">ID</td>
-        <td class="text-center">Nombre</td>
-        <td class="text-center">Tamaño</td>
-        <td class="text-center">Piso</td>
-        <td class="text-center">Imagen</td>
-        <td class="text-center">Descripción</td>
-        <td class="text-center" colspan="2">Acciones</td>
+        <td class="text-center"><strong>ID</strong></td>
+        <td class="text-center"><strong>Nombre</strong></td>
+        <td class="text-center"><strong>Tamaño</strong></td>
+        <td class="text-center"><strong>Piso</strong></td>
+        <td class="text-center"><strong>Imagen</strong></td>
+        <td class="text-center"><strong>Descripción</strong></td>
+        <td class="text-center" colspan="2"><strong>Acciones</strong></td>
       </tr>
     </thead>
     <tbody>
@@ -32,8 +36,22 @@
           <td class="text-center"><?= $r['floor'] ?></td>
           <td class="text-center"><img src="image.php?id=<?php echo $r['id'] ?>" alt="image" class="w-50"></td>
           <td class="text-center"><?= $r['description'] ?></td>
-          <td class="text-center"><a href="update.php?upd=<?php echo $r['id'] ?>">Actualizar</a></td>
-          <td class="text-center"><a href="#">Eliminar</a></td>
+          <td class="text-center align-middle">
+            <button class="btn btn-warning  align-middle">
+              <a class="text-white text-decoration-none d-flex align-items-center" href="update.php?upd=<?= $r['id'] ?>">
+                Actualizar
+                <ion-icon class="ml-1 d-inline-block" name="hammer"></ion-icon>
+              </a>
+            </button>
+          </td>
+          <td class="text-center align-middle">
+            <button class="btn btn-danger">
+              <a class="text-white text-decoration-none d-flex align-items-center" href="remove.php?rm=<?= $r['id'] ?>">
+                Eliminar
+                <ion-icon class="ml-1 d-inline" name="trash"></ion-icon>
+              </a>
+            </button>
+          </td>
         </tr>
       <?php endforeach; ?>
     </tbody>
@@ -48,6 +66,9 @@
 <!-- Page level custom scripts -->
 <script src="js/demo/chart-area-demo.js"></script>
 <script src="js/demo/chart-pie-demo.js"></script>
+<!-- ionic icons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 
