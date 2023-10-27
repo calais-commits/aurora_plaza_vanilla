@@ -1,19 +1,20 @@
 <div class="container">
-  <button class="mb-4 btn btn-info"><a href="create.php" class="text-decoration-none text-white d-flex align-items-center">
-    <strong>Añadir</strong>
+  <button class="mb-4 btn btn-info">
+    <a href="create.php" class="text-decoration-none text-white d-flex align-items-center">
+      <strong>Añadir</strong>
       <ion-icon class="ml-1" name="create"></ion-icon>
     </a>
   </button>
-  <table class="table">
+  <table class="table table-responsive">
     <thead>
       <tr>
         <td class="text-center"><strong>ID</strong></td>
         <td class="text-center"><strong>Nombre</strong></td>
         <td class="text-center"><strong>Tamaño</strong></td>
         <td class="text-center"><strong>Piso</strong></td>
-        <td class="text-center"><strong>Imagen</strong></td>
+        <td class="text-center d-none d-lg-block"><strong>Imagen</strong></td>
         <td class="text-center"><strong>Descripción</strong></td>
-        <td class="text-center" colspan="2"><strong>Acciones</strong></td>
+        <td class="text-center"><strong>Acciones</strong></td>
       </tr>
     </thead>
     <tbody>
@@ -30,33 +31,33 @@
         $recordsId[] = $r['id']; // Agregar el ID al array
       ?>
         <tr>
-          <td class="text-center"><?= $r['id'] ?></td>
-          <td class="text-center"><?= $r['product_name'] ?></td>
-          <td class="text-center"><?= $r['product_size'] ?></td>
-          <td class="text-center"><?= $r['floor'] ?></td>
-          <td class="text-center"><img src="image.php?id=<?php echo $r['id'] ?>" alt="image" class="w-50"></td>
-          <td class="text-center"><?= $r['description'] ?></td>
-          <td class="text-center align-middle">
-            <button class="btn btn-warning  align-middle">
-              <a class="text-white text-decoration-none d-flex align-items-center" href="update.php?upd=<?= $r['id'] ?>">
-                Actualizar
-                <ion-icon class="ml-1 d-inline-block" name="hammer"></ion-icon>
-              </a>
-            </button>
+          <td class="text-center align-middle"><?= $r['id'] ?></td>
+          <td class="text-center align-middle"><?= $r['product_name'] ?></td>
+          <td class="text-center align-middle"><?= $r['product_size'] ?></td>
+          <td class="text-center align-middle"><?= $r['floor'] ?></td>
+          <td class="text-center d-none d-lg-block">
+            <img class="img-fluid w-75" src="image.php?id=<?= $r['id'] ?>" alt="image">
           </td>
+          <td class="text-center align-middle"><?= $r['description'] ?></td>
           <td class="text-center align-middle">
-            <button class="btn btn-danger">
-              <a class="text-white text-decoration-none d-flex align-items-center" href="remove.php?rm=<?= $r['id'] ?>">
-                Eliminar
-                <ion-icon class="ml-1 d-inline" name="trash"></ion-icon>
+            <div class="d-lg-flex flex-lg-column">
+              <a class="btn btn-warning mb-2 text-white text-decoration-none mt-xl-5 mt-lg-3 mt-sm-1 mt-xs-auto d-md-inline-block pr-3" href="update.php?upd=<?= $r['id'] ?>">
+                Editar
+                <ion-icon class="ml-1" name="hammer"></ion-icon>
               </a>
-            </button>
+              <a class="btn btn-danger text-white text-decoration-none mb-lg-3 mb-xl-3 d-md-inline-block" href="remove.php?rm=<?= $r['id'] ?>">
+                Borrar
+                <ion-icon class="ml-1" name="trash"></ion-icon>
+              </a>
+            </div>
           </td>
         </tr>
       <?php endforeach; ?>
     </tbody>
   </table>
 </div>
+
+
 <!-- Custom scripts for all pages-->
 <script src="js/sb-admin-2.min.js"></script>
 
