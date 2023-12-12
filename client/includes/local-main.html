@@ -1,0 +1,14 @@
+
+<body>
+  <!-- This section is for product image display and title -->
+  <section class="first-section">
+    <div class="product-image">
+      <h1><?php echo $row['nombre']; ?></h1>
+        <p><?php echo $row['descripcion']; ?></p>
+        <p>Precio: <?php echo $row['precio']; ?></p>
+        <img src="data:image/jpeg;base64,<?php echo base64_encode($row['imagen']); ?>" alt="Producto Image">
+        <!-- Otros detalles del producto -->
+      <img src="data:image/jpeg;base64,<?php echo base64_encode($row['imagen']); ?>" alt="Producto Image">
+    </div>
+  </section>
+</body>

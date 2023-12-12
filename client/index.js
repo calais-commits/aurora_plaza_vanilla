@@ -59,16 +59,16 @@ $(document).ready(function () {
 
 
 
-  /* Tener el ancho entero del carousel: scrollWidth*/
+  // Get carousel width
   var carouselWidth = $(".cards-inner")[0].scrollWidth;
 
-  /* Tener el ancho de cada carta: Width() */
+  // Get card width
   var cardWidth = $(".cards-item").width();
 
-  /* Variable que almacena la posición actual del scroll que inicializará en 0 */
+  //Variable that save the actual position of the scroll that will initialize in 0
   var scrollPosition = 0;
 
-  /* Cuando el botón "next" sea presionado, verificar si se llegó a la 7ma carta, porque no queremos seguir scrolleando */
+  //When the button next is pressed, verify if the 7th card was reached, beacuse don't want to keep scrolling
   $(".carousel-control-next").on("click", function () {
     if (scrollPosition < (carouselWidth - cardWidth * 4)) { /* Verificar si podemos seguir scrolleando */
       scrollPosition += cardWidth; /* Actualizar posición del scroll */
@@ -76,7 +76,7 @@ $(document).ready(function () {
     }
   });
 
-  /* Similarmente, cuando el botón "previus" sea presionado, verificar si estamos en la primera carta */
+  //When the previus button is pressed, verify if we are in the first card
   $(".carousel-control-prev").on("click", function () {
     if (scrollPosition > 0) {
       scrollPosition -= cardWidth;
@@ -86,12 +86,12 @@ $(document).ready(function () {
       );
     }
     $(document).ready(function () {
-      // Espera a que el documento esté listo
-
-      // Obtén el elemento del [carrusel](https://www.google.com/search?q=carrusel) por su clase o identificador
+      // Wait until the document is ready
+       
+      //Get the element of the carousel by his class o identifyer
       var carouselItem = $('.carousel-item');
-
-      // Modifica el ancho del elemento del [carrusel](https://www.google.com/search?q=carrusel)
+      
+      //Modify the width of the element of the carousel
       carouselItem.css('width', '100%');
     });
   });

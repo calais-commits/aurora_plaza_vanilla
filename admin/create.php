@@ -40,34 +40,36 @@ if (isset($_POST['submit'])) {
   $product_size = $_POST['size'];
   $product_floor = $_POST['floor'];
   $product_description = $_POST['description'];
+  $product_url = $_POST['url'];
 
-  // Verifica si se ha subido un archivo
+  // Verify if the file was submited
   if (isset($_FILES['img']['tmp_name']) && !empty($_FILES['img']['tmp_name'])) {
     $img_info = getimagesize($_FILES['img']['tmp_name']);
 
     if ($img_info !== false) {
-      // El archivo es una imagen, entonces movemos el archivo y obtenemos su contenido
+      // The file is a image, so move the file and get the content
       $img_path = $_FILES['img']['tmp_name'];
       $img_content = file_get_contents($img_path);
     } else {
-      // No es una imagen, manejar según sea necesario
+      // Is not a image
       $img_content = "";
       echo "El archivo no es una imagen válida.";
     }
   } else {
-    // No se subió ningún archivo
+    // No file submited
     $img_content = "";
     echo "No se subió ningún archivo.";
   }
 
 
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $sql = $pdo->prepare("INSERT INTO product (product_name, product_size, floor, image, description) VALUES (:name, :size, :floor, :img, :description)");
+  $sql = $pdo->prepare("INSERT INTO product (product_name, product_size, floor, image, description, url) VALUES (:name, :size, :floor, :img, :description, :url)");
   $sql->bindParam(':name', $product_name);
   $sql->bindParam(':size', $product_size);
   $sql->bindParam(':floor', $product_floor);
   $sql->bindParam(':description', $product_description);
   $sql->bindParam(':img', $img_content);
+  $sql->bindParam(':url', $product_url);
   $sql->execute();
 
   echo "Guardado exitosamente";
@@ -99,15 +101,13 @@ include("includes/header.php");
       <div class="form-group">
         <input type="file" name="img" placeholder="Imagen" class="form-control"><br>
       </div>
+      <div class="form-group">
+        <input type="text" name="url" placeholder="URL" class="form-control"><br>
+      </div>
       <input type="submit" name="submit" value="Aceptar" class="btn btn-success" class="form-control">
     </form>
   </section>
 
-  </div>
-  </div>
-  </div>
-
 </body>
-
 
 </html>
