@@ -41,39 +41,6 @@ $product_floor = "";
 $product_image = "";
 $product_description = "";
 
-/* if(isset($_GET['id'])){
-  $id = $_GET['id'];
-  $query = "SELECT * FROM task WHERE id='$id'";
-  $result = mysqli_query($conn, $query);
-  if(mysqli_num_rows($result) == 1){
-    $row = mysqli_fetch_array($result);
-    $title = $row['title'];
-    $description = $row['description'];
-    $description = $row['img'];
-  }
-  if(isset($_POST['update'])){
-    $id = $_GET['id'];
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-    $image = $image = getimagesize($_FILES['image']['tmp_name']);
-    if ($image !== false) {
-      $image = $_FILES['image']['tmp_name'];
-      $img_content = addslashes(file_get_contents($image));
-    } else {
-      $img_content = "";
-    }
-
-    $query = "UPDATE task set title='$title', description='$description', img='$img_content' WHERE id='$id'";
-
-    mysqli_query($conn, $query);
-    $_SESSION['message'] = 'Task Updated Successfully';
-    $_SESSION['message_type'] = 'warning';
-
-    header('Location: index.php');
-  }
-
-} */
-
 ?>
 
 <?php
@@ -143,7 +110,12 @@ session_start();
           <i class="fas fa-fw fa-wrench"></i>
           <span>Utilities</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapseUtilities" class="collapsZA
+INICIO
+SOBRE NOSOTROS
+CONTACTO
+LOGOUT
+e" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="utilities-color.html">Añadir local</a>
           </div>
@@ -200,7 +172,12 @@ session_start();
                   <input type="file" name="image" class="form-control mb-3">
                   <img src="image.php?id=<?php echo $row['id'] ?>" alt="image" class="w-100">
                 </div>
-                <button class="btn btn-success w-100" name="update">
+                <button class="btn btn-success w-1ZA
+INICIO
+SOBRE NOSOTROS
+CONTACTO
+LOGOUT
+00" name="update">
                   Update
                 </button>
               </form>
@@ -226,7 +203,12 @@ session_start();
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
+  <!-- Core plugin JavaScript-->ZA
+INICIO
+SOBRE NOSOTROS
+CONTACTO
+LOGOUT
+
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->

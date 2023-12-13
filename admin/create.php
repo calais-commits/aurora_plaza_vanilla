@@ -73,40 +73,58 @@ if (isset($_POST['submit'])) {
   $sql->execute();
 
   echo "Guardado exitosamente";
+
+  $sql2 = $pdo->prepare("SELECT * FROM product WHERE id = LAST_INSERT_ID()");
+  $sql2->execute();
+  $product = $sql2->fetch(PDO::FETCH_ASSOC);
+
+
+  // New file path
+  $newPagePath = '../client/pages/local' . $product['id'] . '.php';
+
+  // Template file path
+  $templatePath = '../client/pages/local.php';
+
+  // Read the content of the template
+  $templateContent = file_get_contents($templatePath);
+
+  // Write the content in the new file
+  $result = file_put_contents($newPagePath, $templateContent);
+
 }
 
 include("includes/header.php");
 ?>
 
-  <!-- Create -->
-  <section class="container w-25">
-    <div id="my-3 d-flex flex-row">
-      <p>
-      <h1 class="text-center">Añadir producto</h1>
-      </p>
+<!-- Create -->
+<section class="container w-25">
+  <div id="my-3 d-flex flex-row">
+    <p>
+    <h1 class="text-center">Añadir producto</h1>
+    </p>
+  </div>
+  <form method="POST" action="create.php" enctype="multipart/form-data"><br>
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Nombre del local" class="form-control"><br>
     </div>
-    <form method="POST" action="create.php" enctype="multipart/form-data"><br>
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Nombre del local" class="form-control"><br>
-      </div>
-      <div class="form-group">
-        <input type="number" name="size" placeholder="Tamaño del local" class="form-control"><br>
-      </div>
-      <div class="form-group">
-        <input type="number" name="floor" placeholder="Piso del local" class="form-control"><br>
-      </div>
-      <div class="form-group">
-        <input type="text" rows="10" cols="10" name="description" placeholder="Descripción del local" class="form-control"><br>
-      </div>
-      <div class="form-group">
-        <input type="file" name="img" placeholder="Imagen" class="form-control"><br>
-      </div>
-      <div class="form-group">
-        <input type="text" name="url" placeholder="URL" class="form-control"><br>
-      </div>
-      <input type="submit" name="submit" value="Aceptar" class="btn btn-success" class="form-control">
-    </form>
-  </section>
+    <div class="form-group">
+      <input type="number" name="size" placeholder="Tamaño del local" class="form-control"><br>
+    </div>
+    <div class="form-group">
+      <input type="number" name="floor" placeholder="Piso del local" class="form-control"><br>
+    </div>
+    <div class="form-group">
+      <input type="text" rows="10" cols="10" name="description" placeholder="Descripción del local" class="form-control"><br>
+    </div>
+    <div class="form-group">
+      <input type="file" name="img" placeholder="Imagen" class="form-control"><br>
+    </div>
+    <div class="form-group">
+      <input type="text" name="url" placeholder="URL" class="form-control"><br>
+    </div>
+    <input type="submit" name="submit" value="Aceptar" class="btn btn-success" class="form-control">
+  </form>
+</section>
 
 </body>
 

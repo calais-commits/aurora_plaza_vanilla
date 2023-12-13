@@ -1,6 +1,6 @@
 <section class="carousel-section" id="home">
   <!-- Carousel -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel" data-ride="carousel">
     <div class="carousel-inner banner">
       <div class="carousel-item active">
         <img class="d-block w-100" src="assets/mall-2.jpg" alt="First slide">
@@ -40,10 +40,11 @@
     <div class="carousel-inner cards-inner m-auto">
       <!-- Cartas -->
       <?php
+      //Get all products for DB 
       $sql = $pdo->prepare("SELECT * FROM product");
       $sql->execute();
       $count = $sql->rowCount();
-
+      //Make a card for each product
       if ($count > 0) {
         $products = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -54,7 +55,7 @@
           <h4 class="card-title">'.$product["product_name"].'</h4>
           <p class="card-text">'.$product["description"].'</p>
           <div class="button-container">
-          <a href="#">
+          <a href="pages/local'.$product["id"].'.php?id='.$product["id"].'">
           <button id="btn" type="button" class="btn btn-info">Ver</button>
           </a>
           </div>
