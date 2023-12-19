@@ -16,6 +16,7 @@ if (isset($_POST['id']) && isset($_POST['product_name']) && isset($_POST['produc
     $img_path = $_FILES['image']['tmp_name'];
     $img_content = file_get_contents($img_path);
   } else {
+    // Handle in case of 'image' isn't placed
     // Manejar el caso en que 'image' no está presente
     $sql_fetch_image = $pdo->prepare("SELECT image FROM product WHERE id = :id");
     $sql_fetch_image->bindParam(":id", $id);
