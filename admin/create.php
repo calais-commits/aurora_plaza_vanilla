@@ -36,6 +36,7 @@ if (isset($_SESSION['user_session'])) {
 
 if (isset($_POST['submit'])) {
 
+  // Get the submited data from the form fields
   $product_name = $_POST['name'];
   $product_size = $_POST['size'];
   $product_floor = $_POST['floor'];
@@ -74,6 +75,7 @@ if (isset($_POST['submit'])) {
 
   echo "Guardado exitosamente";
 
+  // Query to get the ID of the last product submited
   $sql2 = $pdo->prepare("SELECT * FROM product WHERE id = LAST_INSERT_ID()");
   $sql2->execute();
   $product = $sql2->fetch(PDO::FETCH_ASSOC);

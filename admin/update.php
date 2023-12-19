@@ -35,6 +35,9 @@ if(isset($_GET['upd'])){
       <img class="w-100" src="image.php?id=<?php echo $data['id']; ?>">
     </div>
     <div class="form-group">
+      <input type="text" name="url" id="url" class="form-control" placeholder="<?= $data['url']; ?>">
+    </div>
+    <div class="form-group">
       <input type="text" name="description" id="description" class="form-control" placeholder="<?= $data['description']; ?>">
     </div>
     <input type="submit" value="Aceptar" class="btn btn-success">
