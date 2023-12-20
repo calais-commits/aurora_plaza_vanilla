@@ -71,7 +71,7 @@ $(document).ready(function () {
   //When the button next is pressed, verify if the 7th card was reached, beacuse don't want to keep scrolling
   $(".carousel-control-next").on("click", function () {
     if (scrollPosition < (carouselWidth - cardWidth * 4)) { /* Verificar si podemos seguir scrolleando */
-      scrollPosition += cardWidth; /* Actualizar posición del scroll */
+      scrollPosition += cardWidth; // Update scroll position
       $(".cards-inner").animate({ scrollLeft: scrollPosition }, 600); /* Scrollear a la izquierda */
     }
   });

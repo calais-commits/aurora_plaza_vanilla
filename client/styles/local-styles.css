@@ -5,7 +5,6 @@
 * {
   margin: 0;
   padding: 0;
-
 }
 
 :root {
@@ -20,11 +19,11 @@
 }
 
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
-body{
-  background-color: #f3f3e9;
+body {
+  background-color: rgb(245, 243, 236);
 }
 
 /* Reset CSS "end" */
@@ -35,66 +34,192 @@ body{
   height: 4rem;
 }
 
-.logout {
-  padding-right: 3rem;
-}
-
-
 /* Header "end" */
 
 /* Main "start" */
 
 /* First section */
 
-.first-section{
-  margin-bottom: 3rem;
+.second-section{
+  margin-top: 6rem;
 }
 
-.product-name {
-  margin-bottom: 3rem;
-}
-
-.banner-img {
-  width: 50%;
-  height: 60vh;
-  min-height: 10vh;
-}
-
-.carousel-control-prev{
-  background-color: black;
-}
-
-.carousel-control-next{
-  background-color: black;
+.description{
+  font-size: 23px;
 }
 
 /* Second section */
 
-.second-section{
-  margin-top: 8rem;
-  margin-bottom: 3rem;
+.img-custom {
+  width: 10%;
+  height: auto;
 }
 
-.description-title{
-  margin-bottom: 3rem;  
+.banner-img {
+  width: 100vh;
 }
 
-.description p{
-  font-size: 22px;
-}
-
-.third-section{
-  margin-bottom: 3rem;
-}
-
-/* Main "end */
 
 
-/* Footer "start" */
+/* Third section */
 
-/* First section */
-
+/* Footer */
 .footer-container {
+  margin-top: 1rem;
+}
+
+.icon-first-part-footer-page {
+  background-color: #333;
+  border-radius: 50%;
+  border: 1px solid #444;
+  height: 40px;
+  width: 40px;
+  margin: 0 0.25rem;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .icon-first-part-footer-page:hover {
+    cursor: pointer;
+  }
+
+  /* Second section */
+
+  .second-part-footer-container h5 {
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .second-part-footer-p-container p {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 0.82rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Third section */
+
+  .third-section p {
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+@media only screen and (max-width: 576px){
+
+  .logout{
+    margin: 0 auto 0 auto
+  }
+
+  .banner-img {
+    width: 60vh;
+  }
+
+  /* Footer */
+  .icon-first-part-footer-page{
+    width: 30px;
+    height: 30px;
+  }
+  
+}
+
+@media only screen and (min-width: 576px) {
+
+  .logout {
+    padding-right: 3rem;
+  }
+
+
+  .second-part-footer-container, .second-part-footer-p-container {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  .navbar {
+    height: 105px;
+  }
+
+  .second-section{
+    margin-top: 8rem;
+  }
+
+  .second-part-footer-p-container p{
+    font-size: 13px;
+ }
+
+
+}
+@media only screen and (min-width: 768px) {
+
+  /* Header */
+
+
+  .logout {
+    padding-right: 3rem;
+  }
+
+
+  /* Second section */
+
+
+
+  /* Third section */
+
+  
+}
+
+@media only screen and (max-width: 1050px) {
+
+  /* Footer */
+  .second-part-footer-container, .second-part-footer-p-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: block;
+ }
+
+  /* Second section */
+
+}
+
+@media only screen and (min-width: 1051px) {
+
+  /* Footer */
+  .second-part-footer-container, .second-part-footer-p-container{
+    margin-left: 1rem;
+    flex-wrap: wrap;
+ }
+ .second-part-footer-p-container{
+  margin: 0 0 0 0;
+ }
+
+  /* Second section */
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    /* Third section */
+
+
+    /* Footer */
+
+    /* Second section */
+
+}
+
+@media only screen and (min-width: 1419px) {
+  /* Second section */
+
+  /* Main "end */
+
+  /* Footer "start" */
+  /* First section */
+
+ .footer-container {
   margin-top: 3rem;
 }
 
@@ -111,26 +236,25 @@ body{
   justify-content: center;
 }
 
-.icon-first-part-footer-page:hover {
-  cursor: pointer;
+  .icon-first-part-footer-page:hover {
+    cursor: pointer;
+  }
+
+  /* Second section */
+
+  .second-part-footer-container h5 {
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .second-part-footer-p-container p {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 0.82rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Third section */
+
+  .third-section p {
+    color: rgba(255, 255, 255, 0.55);
+  }
 }
-
-/* Second section */
-
-.second-part-footer-container h5 {
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.second-part-footer-p-container p {
-  color: rgba(255, 255, 255, 0.70);
-  font-size: 0.82rem;
-  margin-bottom: 0.25rem;
-}
-
-/* Third section */
-
-.third-section p {
-  color: rgba(255, 255, 255, 0.55);
-}
-
-/* Footer "end" */
