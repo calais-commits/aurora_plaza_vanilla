@@ -36,7 +36,7 @@
           <td class="text-center align-middle"><?= $r['product_size'] ?></td>
           <td class="text-center align-middle"><?= $r['floor'] ?></td>
           <td class="text-center d-none d-lg-block">
-            <img class="img-fluid w-75" src="image.php?id=<?= $r['id'] ?>" alt="image">
+            <img class="img-fluid w-75" src="<?= $r['url'] ?>" alt="image">
           </td>
           <td class="text-center align-middle"><?= $r['description'] ?></td>
           <td class="text-center align-middle">

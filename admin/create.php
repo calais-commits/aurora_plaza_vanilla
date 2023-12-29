@@ -43,33 +43,12 @@ if (isset($_POST['submit'])) {
   $product_description = $_POST['description'];
   $product_url = $_POST['url'];
 
-  // Verify if the file was submited
-  if (isset($_FILES['img']['tmp_name']) && !empty($_FILES['img']['tmp_name'])) {
-    $img_info = getimagesize($_FILES['img']['tmp_name']);
-
-    if ($img_info !== false) {
-      // The file is a image, so move the file and get the content
-      $img_path = $_FILES['img']['tmp_name'];
-      $img_content = file_get_contents($img_path);
-    } else {
-      // Is not a image
-      $img_content = "";
-      echo "El archivo no es una imagen válida.";
-    }
-  } else {
-    // No file submited
-    $img_content = "";
-    echo "No se subió ningún archivo.";
-  }
-
-
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $sql = $pdo->prepare("INSERT INTO product (product_name, product_size, floor, image, description, url) VALUES (:name, :size, :floor, :img, :description, :url)");
+  $sql = $pdo->prepare("INSERT INTO product (product_name, product_size, floor, description, url) VALUES (:name, :size, :floor, :description, :url)");
   $sql->bindParam(':name', $product_name);
   $sql->bindParam(':size', $product_size);
   $sql->bindParam(':floor', $product_floor);
   $sql->bindParam(':description', $product_description);
-  $sql->bindParam(':img', $img_content);
   $sql->bindParam(':url', $product_url);
   $sql->execute();
 
@@ -117,9 +96,6 @@ include("includes/header.php");
     </div>
     <div class="form-group">
       <input type="text" rows="10" cols="10" name="description" placeholder="Descripción del local" class="form-control"><br>
-    </div>
-    <div class="form-group">
-      <input type="file" name="img" placeholder="Imagen" class="form-control"><br>
     </div>
     <div class="form-group">
       <input type="text" name="url" placeholder="URL" class="form-control"><br>

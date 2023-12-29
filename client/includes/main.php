@@ -47,11 +47,11 @@
       //Make a card for each product
       if ($count > 0) {
         $products = $sql->fetchAll(PDO::FETCH_ASSOC);
-
         foreach ($products as $product) {
+
           echo '<div class="carousel-item cards-item">
           <div class="card text-white bg-primary">
-          <img src="'.$product["url"].'" class="img-fluid c-img img1">
+          <img src="'.$product['url'].'" class="img-fluid c-img img1">
           <div class="card-body">
           <h4 class="card-title">'.$product["product_name"].'</h4>
           <p class="card-text">'.$product["description"].'</p>

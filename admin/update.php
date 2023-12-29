@@ -31,11 +31,10 @@ if(isset($_GET['upd'])){
       <input type="number" name="floor" id="floor" class="form-control" placeholder="Piso" value="<?= $data['floor']; ?>">
     </div>
     <div class="form-group">
-      <input class="mb-3" type="file" name="image" id="image" class="form-control">
-      <img class="w-100" src="image.php?id=<?php echo $data['id']; ?>">
+      <input type="text" name="url" id="url" class="form-control" placeholder="<?= $data['url']; ?>">
     </div>
     <div class="form-group">
-      <input type="text" name="url" id="url" class="form-control" placeholder="<?= $data['url']; ?>">
+      <img class="w-100" src="<?php echo $data['url']; ?>">
     </div>
     <div class="form-group">
       <input type="text" name="description" id="description" class="form-control" placeholder="<?= $data['description']; ?>">

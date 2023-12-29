@@ -1,13 +1,14 @@
 <?php
 include('../database/dbconn.php');
 
+$message="";
+
 // Submit data to DB 
 if (isset($_REQUEST['submit'])) {
 	// Capture user data 
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-	$message = "";
 	// Validate if data already exist 
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$validate = $pdo->prepare("SELECT * FROM user WHERE email=:email || name=:name");
@@ -19,10 +20,12 @@ if (isset($_REQUEST['submit'])) {
 		$message = "<div class='alert alert-danger text-center' role='alert'>El usuario o email ya existen </div>";
 	} elseif ($email === "" || $name === "" || $password === "") { // Validate if variables are empty 
 		$message = "<div class='alert alert-warning text-center' role='alert'>Por favor, introduzca sus datos</div>";
-	} else {
+	} elseif (!isset($message)){
+		$message = "<div class='alert alert-info text-center' role='alert'>Por favor, llene los campos</div>";
+	}	else {
 		// Prepare SQL query for submit user data to DB
 		$insert = $pdo->prepare("INSERT INTO user (name, email, password) VALUES (:name, :email, :password)");
-		//Bind values 
+		//	Bind values 
 		$insert->bindParam(':name', $name);
 		$insert->bindParam(':email', $email);
 		$insert->bindParam(':password', $password);

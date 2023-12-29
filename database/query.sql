@@ -5,7 +5,6 @@ CREATE TABLE `product` (
     `product_name` VARCHAR(30), 
     `product_size` INT(11),
     `floor` INT(2),
-    `image` BLOB
 );
 
 CREATE TABLE `user`(

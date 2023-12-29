@@ -16,13 +16,13 @@ if (isset($_SESSION['user_session'])) {
 	}
 }
 
+$message = "";
 //Validate if we have a global variable $_POST for email and password.
 if (isset($_POST['submit'])) {
 	//Capture user data
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	$admin;
-	$message = "";
 	//Prepare SQL query for submit user data to DB.
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$sql = $pdo->prepare("SELECT *, admin, name FROM user WHERE email=:email AND password=:password");
