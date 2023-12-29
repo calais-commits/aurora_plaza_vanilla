@@ -37,7 +37,7 @@
   </div>
   <!-- Carousel -->
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner cards-inner m-auto">
+    <div class="carousel-inner cards-inner m-auto d-flex">
       <!-- Cartas -->
       <?php
       //Get all products for DB 
@@ -49,7 +49,8 @@
         $products = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($products as $product) {
-          echo '<div class="card text-white bg-primary">
+          echo '<div class="carousel-item cards-item">
+          <div class="card text-white bg-primary">
           <img src="'.$product["url"].'" class="img-fluid c-img img1">
           <div class="card-body">
           <h4 class="card-title">'.$product["product_name"].'</h4>
@@ -61,14 +62,12 @@
           </div>
           </div>
           </div>
-          ';
+          </div>';
         }
       }
       ?>
-    </div>
+    <!-- Controles -->
   </div>
-
-  <!-- Controles -->
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -77,5 +76,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+    </div>
   </div>
+
 </section>

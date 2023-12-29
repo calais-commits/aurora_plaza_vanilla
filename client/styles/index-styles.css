@@ -189,6 +189,7 @@ html {
    .cards-inner {
       height: 30rem;
       width: 100%;
+      display: flex;
    }
 
    .card-img{
