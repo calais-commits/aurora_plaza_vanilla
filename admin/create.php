@@ -95,10 +95,10 @@ include("includes/header.php");
       <input type="number" name="floor" placeholder="Piso del local" class="form-control"><br>
     </div>
     <div class="form-group">
-      <input type="text" rows="10" cols="10" name="description" placeholder="Descripción del local" class="form-control"><br>
+      <input type="text" name="url" placeholder="URL" class="form-control"><br>
     </div>
     <div class="form-group">
-      <input type="text" name="url" placeholder="URL" class="form-control"><br>
+      <input type="text" rows="10" cols="10" name="description" placeholder="Descripción del local" class="form-control"><br>
     </div>
     <input type="submit" name="submit" value="Aceptar" class="btn btn-success" class="form-control">
   </form>
