@@ -15,7 +15,6 @@ $(document).ready(function () {
     $(".btn-info").addClass("w-100");
     $(".carousel-item").css("width", "100%");
     $(".btn-info").addClass("w-100");
-    $(".carousel-item").css("width", "100%");
   }
 
   function removeStyles (){

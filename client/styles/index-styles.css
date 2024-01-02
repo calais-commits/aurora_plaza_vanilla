@@ -70,9 +70,18 @@ html {
       min-height: 30vh;
    }
    .cards-inner{
-      width: 80%;
+      display: flex;
+      height: 33rem;
+      width: 85%;
+      margin: 0 auto;   
    }
 
+   .cards-item{
+      margin-right: 0;
+      margin-left: 0;
+      flex: 0 0 calc(100%/1);
+      display: block;
+   }
    /* Footer */
 
    /* Second section */
