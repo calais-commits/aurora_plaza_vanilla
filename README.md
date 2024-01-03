@@ -42,7 +42,7 @@ The 'important' folder has a file with 9 example links to upload images when cre
 
 ## Live demo
 
-[Live Demo Link](https://auroraplazavanilla.000webhostapp.com)
+[Live Demo Link][(https://auroraplazavanilla.000webhostapp.com](https://auroraplazavanilla.000webhostapp.com/login/register.php))
 
 ## Author
 
