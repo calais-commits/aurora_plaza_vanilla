@@ -3,10 +3,10 @@
 session_start();
 
 /* DB data */
-$host = "127.0.0.1";
-$dbname = "aurora_plaza_vanilla";
-$dbuser = "root";
-$dbpass = "";
+$host = "localhost";
+$dbname = "id21747204_aurora_plaza_vanilla";
+$dbuser = "id21747204_admin";
+$dbpass = "Admin123*";
 
 /* Connect with DB */
 try {
