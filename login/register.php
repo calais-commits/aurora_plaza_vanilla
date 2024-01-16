@@ -1,7 +1,7 @@
 <?php
 include('../database/dbconn.php');
 
-$message="";
+$message = "";
 
 // Submit data to DB 
 if (isset($_REQUEST['submit'])) {
@@ -9,6 +9,8 @@ if (isset($_REQUEST['submit'])) {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
+	// Assign admin status to session variable
+	$_SESSION['admin'] = 0; // By default, user is not an admin
 	// Validate if data already exist 
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$validate = $pdo->prepare("SELECT * FROM user WHERE email=:email || name=:name");
@@ -20,9 +22,9 @@ if (isset($_REQUEST['submit'])) {
 		$message = "<div class='alert alert-danger text-center' role='alert'>El usuario o email ya existen </div>";
 	} elseif ($email === "" || $name === "" || $password === "") { // Validate if variables are empty 
 		$message = "<div class='alert alert-warning text-center' role='alert'>Por favor, introduzca sus datos</div>";
-	} elseif (!isset($message)){
+	} elseif (!isset($message)) {
 		$message = "<div class='alert alert-info text-center' role='alert'>Por favor, llene los campos</div>";
-	}	else {
+	} else {
 		// Prepare SQL query for submit user data to DB
 		$insert = $pdo->prepare("INSERT INTO user (name, email, password) VALUES (:name, :email, :password)");
 		//	Bind values 
@@ -32,6 +34,17 @@ if (isset($_REQUEST['submit'])) {
 		// Execute query, assign value to $_SESSION variable and redirect 
 		$insert->execute();
 		$message = "<div class='alert alert-success text-center' role='alert'>Usuario registrado satisfactoriamente</div>";
+		// Assign admin status to session variable
+		$_SESSION['admin'] = 0; // By default, user is not an admin
+		// Verificar el estado del usuario (si es admin o no)
+		$checkAdmin = $pdo->prepare("SELECT admin FROM user WHERE email=:email");
+		$checkAdmin->bindParam(':email', $email);
+		$checkAdmin->execute();
+
+		if ($checkAdmin->rowCount() > 0) {
+			$userData = $checkAdmin->fetch(PDO::FETCH_ASSOC);
+			$_SESSION['admin'] = $userData['admin'];
+		}
 		$_SESSION['user_session'] = $email;
 	}
 }

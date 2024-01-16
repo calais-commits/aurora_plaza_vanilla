@@ -21,6 +21,7 @@ CREATE TABLE `user`(
     'admin' INT(1)
 );
 
+
 /* Insert example products (DON'T DO IT MANUALLY IN THE DB OR THE PAGE FOR THIS PRODUCT WON'T BE CREATED)*/
 
 INSERT INTO product (product_name, product_size, floor, description, url) VALUES ('Local 1', 50, 1, 'Primer local', 'https://i.ibb.co/FzLZJMx/slide1.jpg');
