@@ -2,6 +2,7 @@
 include("../database/dbconn.php");
 include_once("includes/header.php");
 
+
 if(isset($_GET['upd'])){
   $id = $_GET['upd'];
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -31,7 +32,7 @@ if(isset($_GET['upd'])){
       <input type="number" name="floor" id="floor" class="form-control" placeholder="Piso" value="<?= $data['floor']; ?>">
     </div>
     <div class="form-group">
-      <input type="text" name="url" id="url" class="form-control" placeholder="<?= $data['url']; ?>">
+      <input type="text" name="url" id="url" class="form-control" placeholder="URL" value="<?= $data['url']; ?>">
     </div>
     <div class="form-group">
       <img class="w-100" src="<?php echo $data['url']; ?>">
@@ -52,6 +53,8 @@ if(isset($_GET['upd'])){
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
   
-</body>
-
+</body class="mb-4">
+<?php 
+  include_once("includes/footer.php");
+?>
 </html>

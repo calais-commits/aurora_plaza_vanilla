@@ -110,12 +110,7 @@ session_start();
           <i class="fas fa-fw fa-wrench"></i>
           <span>Utilities</span>
         </a>
-        <div id="collapseUtilities" class="collapsZA
-INICIO
-SOBRE NOSOTROS
-CONTACTO
-LOGOUT
-e" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapseUtilities" class="collapsZAe" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="utilities-color.html">Añadir local</a>
           </div>
@@ -172,12 +167,7 @@ e" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                   <input type="file" name="image" class="form-control mb-3">
                   <img src="image.php?id=<?php echo $row['id'] ?>" alt="image" class="w-100">
                 </div>
-                <button class="btn btn-success w-1ZA
-INICIO
-SOBRE NOSOTROS
-CONTACTO
-LOGOUT
-00" name="update">
+                <button class="btn btn-success w-1ZA00" name="update">
                   Update
                 </button>
               </form>
@@ -203,12 +193,6 @@ LOGOUT
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->ZA
-INICIO
-SOBRE NOSOTROS
-CONTACTO
-LOGOUT
-
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
@@ -221,5 +205,7 @@ LOGOUT
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
 </body>
-
+<?php 
+  include_once("includes/footer.php");
+?>
 </html>

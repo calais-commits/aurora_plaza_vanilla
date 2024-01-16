@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include("../database/dbconn.php");
 
-if (isset($_POST['id']) && isset($_POST['product_name']) && isset($_POST['product_size']) && isset($_POST['floor']) && isset($_POST['description'])) {
+if (isset($_POST['id']) && isset($_POST['product_name']) && isset($_POST['product_size']) && isset($_POST['floor']) && isset($_POST['description']) && isset($_POST['url'])) {
 
   $id = $_POST['id'];
   $product_name = $_POST['product_name'];
