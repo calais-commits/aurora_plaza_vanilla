@@ -24,7 +24,6 @@ if (isset($_POST['submit'])) {
 	$password = $_POST['password'];
 	$admin;
 	//Prepare SQL query for submit user data to DB.
-	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$sql = $pdo->prepare("SELECT *, admin, name FROM user WHERE email=:email AND password=:password");
 	$sql->bindParam(':email', $email);
 	$sql->bindParam(':password', $password);
@@ -71,10 +70,10 @@ if (isset($_POST['submit'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-	<title>Login V3</title>
+	<title>Inicio</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
