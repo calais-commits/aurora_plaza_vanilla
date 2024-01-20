@@ -48,7 +48,7 @@ The 'important' folder has a file with 9 example links to upload images when cre
 
 👤 **Jesús Meléndez**
 
-- Github: [@comidita123](https://github.com/comidita123)
+- Github: [@comidita123](https://github.com/calais-commits)
 - Gmail: [Jesús Meléndez](jesus.gabriel.mn.99@gmail.com)
 
 ## Show your support
