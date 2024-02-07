@@ -6,13 +6,13 @@ include('../database/dbconn.php');
 if (isset($_SESSION['user_session'])) {
 	// Verify if is admin or client
 	if ($_SESSION['admin'] == 1) {
-			// Readirect to admin page
-			header("Location: ../admin/index.php");
-			exit();
+		// Readirect to admin page
+		header("Location: ../admin/index.php");
+		exit();
 	} else {
-			// Redirect to client page
-			header("Location: ../client/index.php");
-			exit();
+		// Redirect to client page
+		header("Location: ../client/index.php");
+		exit();
 	}
 }
 
@@ -51,17 +51,17 @@ if (isset($_POST['submit'])) {
 		$message = "<div class='alert alert-warning text-center' role='alert'>Por favor, ingrese sus datos.</div>";
 	}
 	//If introduced data are incorrect
-	elseif($email!=$user['email'] || $password!=$user['password']){
+	elseif ($email != $user['email'] || $password != $user['password']) {
 		$message = "<div class='alert alert-danger text-center' role='alert'>Datos incorrectos.</div>";
 	}
 	//If a session already exist.
-	elseif (isset($_SESSION['user_session'])){
+	elseif (isset($_SESSION['user_session'])) {
 		//Redirect to admin
-		if($admin == TRUE){
+		if ($admin == TRUE) {
 			header('Location: ../admin/index.php');
 		}
 		//Redirect to client
-		elseif($admin == FALSE){
+		elseif ($admin == FALSE) {
 			header('Location: ../client/index.php');
 		}
 	}
@@ -105,6 +105,15 @@ if (isset($_POST['submit'])) {
 	<form action="login.php" method="POST">
 		<div class="limiter">
 			<div class="container-login100">
+				<div class="access-note">
+					<h4>Datos de acceso</h4>
+					<h6>Cliente:</h6>
+					<p class="data-paragraph">Correo: usuario@usuario.com</p>
+					<p class="data-paragraph">Contraseña: usuario</p>
+					<h6>Administrador</h6>
+					<p class="data-paragraph">Usuario: admin@admin.com</p>
+					<p class="data-paragraph">Contraseña: admin</p>
+				</div>
 				<div class="wrap-login100">
 					<form class="login100-form validate-form">
 						<!-- Message -->

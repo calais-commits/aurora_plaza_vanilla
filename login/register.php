@@ -86,6 +86,11 @@ if (isset($_REQUEST['submit'])) {
 	<form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
 		<div class="limiter">
 			<div class="container-login100">
+				<div class="access-note">
+					<h4 class="mb-5">Nota:<br></h4>
+					<p class="data-paragraph mb-3 h6">Ahora puedes ingresar sin registrarte con datos de prueba</p>
+					<a href="login.php" class="note-link h6">Ve directo al login</a>
+				</div>
 				<div class="wrap-login100">
 					<form class="login100-form validate-form">
 						<!-- Message -->

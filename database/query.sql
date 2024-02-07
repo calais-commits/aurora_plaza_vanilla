@@ -9,8 +9,8 @@ CREATE TABLE `product` (
     `product_name` VARCHAR(30), 
     `product_size` INT(11),
     `floor` INT(2),
-    'description' VARCHAR(200),
-    'url' VARCHAR(300)
+    `description` VARCHAR(200),
+    `url` VARCHAR(300)
 );
 
 CREATE TABLE `user`(
@@ -18,7 +18,7 @@ CREATE TABLE `user`(
     `name` VARCHAR(30),
     `email` VARCHAR(50),
     `password` VARCHAR(50),
-    'admin' INT(1)
+    `admin` INT(1)
 );
 
 
