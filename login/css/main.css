@@ -165,6 +165,41 @@ iframe {
   margin: 0 auto;
 }
 
+
+.access-note{
+  margin: 0 3rem 1rem;
+  background-color: #fff;
+  width: 22rem;
+  height: 17rem;
+  border-radius: 5%;
+}
+
+.access-note h4{
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.access-note h6{
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+} 
+
+.data-paragraph{
+  padding: 0 1rem;
+  margin-bottom: 0;
+}
+
+.note-link{
+  padding: 0 1rem;
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+
+.note-link:hover{
+  text-decoration: none;
+  color: #9152f8;
+}
+
 .container-login100 {
   width: 100%;  
   min-height: 100vh;
